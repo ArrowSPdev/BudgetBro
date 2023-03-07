@@ -3,6 +3,7 @@ package com.asquared.budgetbrover01;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.asquared.budgetbrover01.databinding.ActivitySavingsInputBinding;
 import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,6 +26,8 @@ import android.widget.ListView;
 public class MainActivity extends AppCompatActivity {
 
     ImageButton savingButton;
+    Button svgsBtntest;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,5 +44,15 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
+        svgsBtntest= (Button) findViewById(R.id.svgsBtntest);
+        svgsBtntest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent=new Intent(MainActivity.this,SavingsInput.class);
+                startActivity(intent);
+
+            }
+        });
     }
 }

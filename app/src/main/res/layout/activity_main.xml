@@ -20,37 +20,25 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
-        android:id="@+id/rewardsImage"
-        android:layout_width="207dp"
-        android:layout_height="86dp"
-        android:layout_marginTop="36dp"
-        android:src="@drawable/rewards"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/topbarImage"
-        app:layout_constraintTop_toTopOf="@+id/topbarImage" />
-
-    <ImageView
         android:id="@+id/settingsImage"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="24dp"
         android:src="@drawable/settings"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.35"
-        app:layout_constraintStart_toEndOf="@+id/rewardsImage"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/profileImage"
         android:layout_width="60dp"
         android:layout_height="60dp"
+        android:layout_marginStart="24dp"
         android:src="@drawable/user"
         app:layout_constraintBottom_toBottomOf="@+id/topbarImage"
-        app:layout_constraintEnd_toStartOf="@+id/rewardsImage"
-        app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.361" />
+        app:layout_constraintVertical_bias="0.277" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
@@ -89,5 +77,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/topbarImage"
         app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/svgsBtntest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        tools:layout_editor_absoluteX="158dp"
+        tools:layout_editor_absoluteY="502dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
