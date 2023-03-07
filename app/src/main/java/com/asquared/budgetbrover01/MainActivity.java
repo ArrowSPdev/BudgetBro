@@ -47,7 +47,12 @@ public class MainActivity extends AppCompatActivity {
         svgsBtntest= (Button) findViewById(R.id.svgsBtntest);
         svgsBtntest.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
+
+            }
+
+            @Override
+            public void startSavingsInput(View view) {
 
                 Intent intent=new Intent(MainActivity.this,SavingsInput.class);
                 startActivity(intent);
