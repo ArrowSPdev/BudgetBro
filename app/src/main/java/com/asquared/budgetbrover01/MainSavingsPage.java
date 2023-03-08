@@ -21,10 +21,10 @@ public class MainSavingsPage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_savings_input);
+        setContentView(R.layout.activity_main_savings_page);
 
         // on below line we are initializing our variables.
-        savingsLV = findViewById(R.id.LVSavings);
+        savingsLV = findViewById(R.id.SavingsLV);
         addsvgBtn = findViewById(R.id.BtnAdd);
         itemsvgEdt = findViewById(R.id.EdtSavingName);
         svgsList = new ArrayList<>();
@@ -35,7 +35,7 @@ public class MainSavingsPage extends AppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, svgsList);
 
         // on below line we are setting adapter for our list view.
-        ListView lv = (ListView) findViewById(R.id.LVSavings);
+        ListView lv = (ListView) findViewById(R.id.SavingsLV);
         lv.setAdapter(adapter);
 
 

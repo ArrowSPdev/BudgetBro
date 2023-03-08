@@ -1,48 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/idRLContainer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainSavingsPage">
 
-
-    <ImageView
-        android:id="@+id/topbar"
-        android:layout_width="wrap_content"
+    <!--on below line we are creating edit text
+        for adding a new item to list-->
+    <EditText
+        android:id="@+id/EdtSavingName"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:adjustViewBounds="true"
-        android:src="@drawable/fullhomescreen1" />
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        android:layout_toLeftOf="@id/BtnAdd"
+        android:hint="Add Saving Name" />
 
-    <TextView
-        android:id="@+id/savingstitle"
-        android:layout_width="218dp"
-        android:layout_height="76dp"
-        android:layout_gravity="center"
-        android:fontFamily="@font/cabin_bold"
-        android:text="SAVINGS"
-        android:textAlignment="center"
-        android:textColor="#68CEFE"
-        android:textSize="40sp" />
-
+    <!--button for adding item from edit text to list-->
     <Button
-        android:id="@+id/addsavingnameButton"
+        android:id="@+id/BtnAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/roundbutton"
-        android:fontFamily="@font/cabin_bold"
-        android:onClick="newSaving"
-        android:text="ADD SAVING" />
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        android:text="Add"
+        android:textAllCaps="false" />
 
+    <!--list view to display list of savings-->
     <ListView
-        android:id="@+id/savingsListView"
+        android:id="@+id/SavingsLV"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:divider="@color/primary2"
-        android:dividerHeight="3dp"
-        android:padding="30dp" />
+        android:layout_below="@id/EdtSavingName" />
 
-</LinearLayout>
-
+</RelativeLayout>

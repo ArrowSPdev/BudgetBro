@@ -22,7 +22,7 @@ public class MainBudgetPage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_budget_page);
 
         // on below line we are initializing our variables.
         BudgetLV = findViewById(R.id.BudgetLV);
@@ -30,15 +30,14 @@ public class MainBudgetPage extends AppCompatActivity {
         BudgetEdt = findViewById(R.id.EdtBudget);
         BudgetList = new ArrayList<>();
 
-        // on below line we are adding items to our list
-        BudgetList.add("C++");
-        BudgetList.add("Python");
+
 
         // on the below line we are initializing the adapter for our list view.
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, BudgetList);
 
         // on below line we are setting adapter for our list view.
-        BudgetLV.setAdapter(adapter);
+        ListView lv = (ListView) findViewById(R.id.BudgetLV);
+        lv.setAdapter(adapter);
 
         // on below line we are adding click listener for our button.
         addBudgetBtn.setOnClickListener(new View.OnClickListener() {
