@@ -6,24 +6,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".SavingsInput">
+    tools:context=".MainSavingsPage">
 
     <!--on below line we are creating edit text
         for adding a new item to list-->
     <EditText
-        android:id="@+id/idEdtSavingName"
+        android:id="@+id/EdtSavingName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="4dp"
         android:layout_marginBottom="4dp"
-        android:layout_toLeftOf="@id/idBtnAdd"
+        android:layout_toLeftOf="@id/BtnAdd"
         android:hint="Add Saving Name" />
 
     <!--button for adding item from edit text to list-->
     <Button
-        android:id="@+id/idBtnAdd"
+        android:id="@+id/BtnAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -36,9 +36,9 @@
 
     <!--list view to display list of savings-->
     <ListView
-        android:id="@+id/idLVSavings"
+        android:id="@+id/LVSavings"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/idEdtSavingName" />
+        android:layout_below="@id/EdtSavingName" />
 
 </RelativeLayout>
