@@ -1,5 +1,6 @@
 package com.asquared.budgetbrover01;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -17,6 +18,7 @@ public class MainBudgetPage extends AppCompatActivity {
     private EditText BudgetEdt;
     private ArrayList<String> BudgetList;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
