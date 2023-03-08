@@ -9,5 +9,5 @@
         android:id="@+id/mainSavingsPage"
         android:name="com.asquared.budgetbrover01.MainSavingsPage"
         android:label="activity_main_savings_page"
-        tools:layout="@layout/activity_main_savings_pagex" />
+        tools:layout="@layout/xactivity_main_savings_page" />
 </navigation>

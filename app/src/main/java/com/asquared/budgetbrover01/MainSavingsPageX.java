@@ -15,7 +15,7 @@ public class MainSavingsPageX extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_savings_pagex);
+        setContentView(R.layout.xactivity_main_savings_page);
 
         initWidgets();
         setSavingsAdapter();
