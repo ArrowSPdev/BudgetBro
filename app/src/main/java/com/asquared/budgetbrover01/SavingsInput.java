@@ -12,7 +12,6 @@ import java.util.ArrayList;
 
 public class SavingsInput extends AppCompatActivity {
 
-    // on below line we are creating variables.
     private ListView savingsLV;
     private Button addBtn;
     private EditText itemEdt;
@@ -38,6 +37,7 @@ public class SavingsInput extends AppCompatActivity {
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, svgsList);
 
         // on below line we are setting adapter for our list view.
+        View viewById = findViewById(R.id.idLVSavings);
         savingsLV.setAdapter(adapter);
 
         // on below line we are adding click listener for our button.

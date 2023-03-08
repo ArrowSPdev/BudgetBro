@@ -33,31 +33,31 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        savingButton= (ImageButton) findViewById(R.id.savingButton);
-                savingButton.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-
-                        Intent intent=new Intent(MainActivity.this,MainSavingsPage.class);
-                        startActivity(intent);
-
-                    }
-                });
-
-        svgsBtntest= (Button) findViewById(R.id.svgsBtntest);
-        svgsBtntest.setOnClickListener(new View.OnClickListener() {
+        ImageButton savingButton = (ImageButton) findViewById(R.id.savingButton);
+        Button svgsBtntest = (Button) findViewById(R.id.svgsBtntest);
+        savingButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-
-            }
-
-            @Override
-            public void startSavingsInput(View view) {
-
-                Intent intent=new Intent(MainActivity.this,SavingsInput.class);
-                startActivity(intent);
-
+            public void onClick(View v) {
+                gotoSavingsPage();
             }
         });
+
+        svgsBtntest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoSavingsInput();
+            }
+        });
+
+    }
+
+    private void gotoSavingsPage() {
+        Intent intent = new Intent(MainActivity.this, MainSavingsPage.class);
+        startActivity(intent);
+    }
+
+    private void gotoSavingsInput() {
+        Intent intent = new Intent(MainActivity.this, SavingsInput.class);
+        startActivity(intent);
     }
 }
