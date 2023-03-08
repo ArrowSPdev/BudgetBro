@@ -21,7 +21,7 @@ public class SavingsInput extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_savings_input);
 
         // on below line we are initializing our variables.
         savingsLV = findViewById(R.id.idLVSavings);
@@ -29,16 +29,15 @@ public class SavingsInput extends AppCompatActivity {
         itemEdt = findViewById(R.id.idEdtSavingName);
         svgsList = new ArrayList<>();
 
-        // on below line we are adding items to our list
-        svgsList.add("C++");
-        svgsList.add("Python");
+
 
         // on the below line we are initializing the adapter for our list view.
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, svgsList);
 
         // on below line we are setting adapter for our list view.
-        View viewById = findViewById(R.id.idLVSavings);
-        savingsLV.setAdapter(adapter);
+        ListView lv = (ListView) findViewById(R.id.idLVSavings);
+        lv.setAdapter(adapter);
+
 
         // on below line we are adding click listener for our button.
         addBtn.setOnClickListener(new View.OnClickListener() {

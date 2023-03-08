@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
         ImageButton savingButton = (ImageButton) findViewById(R.id.savingButton);
         Button svgsBtntest = (Button) findViewById(R.id.svgsBtntest);
+
         savingButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

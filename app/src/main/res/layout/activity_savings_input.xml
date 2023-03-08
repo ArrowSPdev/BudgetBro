@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".SavingsInput">
 
     <!--on below line we are creating edit text
         for adding a new item to list-->
