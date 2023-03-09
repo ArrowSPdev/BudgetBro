@@ -13,10 +13,10 @@ import java.util.ArrayList;
 public class MainBudgetPage extends AppCompatActivity {
 
     // on below line we are creating variables.
-    private ListView BudgetLV;
-    private Button addBudgetBtn;
-    private EditText BudgetEdt;
-    private ArrayList<String> BudgetList;
+    public ListView BudgetLV;
+    public Button addBudgetBtn;
+    public EditText BudgetEdt;
+    public ArrayList<String> BudgetList;
 
     @SuppressLint("MissingInflatedId")
     @Override
