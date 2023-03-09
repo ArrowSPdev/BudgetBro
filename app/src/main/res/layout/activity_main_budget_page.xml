@@ -19,7 +19,7 @@
         android:layout_marginEnd="4dp"
         android:layout_marginBottom="4dp"
         android:layout_toLeftOf="@id/AddBudget"
-        android:hint="Enter item name to add in ist" />
+        android:hint="Add Budget Name" />
 
     <!--button for adding item from edit text to list-->
     <Button
