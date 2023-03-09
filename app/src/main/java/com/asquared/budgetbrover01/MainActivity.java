@@ -38,13 +38,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        svgsBtntest.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                gotoSavingsInput();
-            }
-        });
-
     }
 
     private void gotoBudgetPage() {
@@ -53,11 +46,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void gotoSavingsPage() {
-        Intent intent = new Intent(MainActivity.this, MainSavingsPageX.class);
-        startActivity(intent);
-    }
-
-    private void gotoSavingsInput() {
         Intent intent = new Intent(MainActivity.this, MainSavingsPage.class);
         startActivity(intent);
     }
