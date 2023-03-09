@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/idRLContainer"
     android:layout_width="match_parent"
@@ -10,35 +11,45 @@
 
     <!--on below line we are creating edit text
         for adding a new item to list-->
-    <EditText
-        android:id="@+id/EdtSavingName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginBottom="4dp"
-        android:layout_toLeftOf="@id/BtnAdd"
-        android:hint="Add Saving Name" />
+
 
     <!--button for adding item from edit text to list-->
-    <Button
-        android:id="@+id/BtnAdd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginBottom="4dp"
-        android:text="Add"
-        android:textAllCaps="false" />
 
     <!--list view to display list of savings-->
+    <Button
+        android:id="@+id/BtnSvgInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/SavingsLV"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="0dp"
+        android:text="ADD NEW SAVING GOAL"
+        android:textAllCaps="false"
+        android:onClick="gotoSavingInput"/>
+
     <ListView
         android:id="@+id/SavingsLV"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/EdtSavingName" />
+        android:layout_width="350dp"
+        android:layout_height="450dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/TopBarImage"
+        android:layout_marginTop="-30dp" />
 
+    <ImageView
+        android:id="@+id/TopBarImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        app:srcCompat="@drawable/fullhomescreen1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/cabin_bold"
+        android:text="SAVINGS"
+        android:textColor="#FFFFFF"
+        android:textSize="50sp" />
 </RelativeLayout>

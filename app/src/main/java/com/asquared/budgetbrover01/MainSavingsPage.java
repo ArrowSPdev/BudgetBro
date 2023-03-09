@@ -1,20 +1,24 @@
 package com.asquared.budgetbrover01;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ListAdapter;
 import android.widget.ListView;
 import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 
 public class MainSavingsPage extends AppCompatActivity {
 
+
+
     private ListView savingsLV;
-    private Button addsvgBtn;
-    private EditText itemsvgEdt;
+    Button BtnSvgInput;
     private ArrayList<String> svgsList;
 
     @SuppressLint("MissingInflatedId")
@@ -23,42 +27,22 @@ public class MainSavingsPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_savings_page);
 
-        // on below line we are initializing our variables.
-        savingsLV = findViewById(R.id.SavingsLV);
-        addsvgBtn = findViewById(R.id.BtnAdd);
-        itemsvgEdt = findViewById(R.id.EdtSavingName);
-        svgsList = new ArrayList<>();
-
-
-
-        // on the below line we are initializing the adapter for our list view.
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, svgsList);
-
         // on below line we are setting adapter for our list view.
         ListView lv = (ListView) findViewById(R.id.SavingsLV);
-        lv.setAdapter(adapter);
+        ListAdapter adapter;
 
 
-        // on below line we are adding click listener for our button.
-        addsvgBtn.setOnClickListener(new View.OnClickListener() {
+        Button BtnSvgInput = (Button) findViewById(R.id.BtnSvgInput);
+
+        BtnSvgInput.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // on below line we are getting text from edit text
-                String item = itemsvgEdt.getText().toString();
-
-                // on below line we are checking if item is not empty
-                if (!item.isEmpty()) {
-
-                    // on below line we are adding item to our list.
-                    svgsList.add(item);
-
-                    // on below line we are notifying adapter
-                    // that data in list is updated to
-                    // update our list view.
-                    adapter.notifyDataSetChanged();
-                }
-
-            }
+                gotoSavingInput(); }
         });
+    }
+
+    private void gotoSavingInput()  {
+    Intent intent = new Intent(MainSavingsPage.this, SavingInputPage.class);
+    startActivity(intent);
     }
 }

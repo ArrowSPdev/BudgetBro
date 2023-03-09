@@ -14,7 +14,6 @@ public class MainActivity extends AppCompatActivity {
 
     ImageButton savingButton;
     ImageButton BudgetButton;
-    Button svgsBtntest;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
 
         ImageButton savingButton = (ImageButton) findViewById(R.id.savingButton);
         ImageButton budgetButton = (ImageButton) findViewById(R.id.budgetButton);
-        Button svgsBtntest = (Button) findViewById(R.id.svgsBtntest);
 
         savingButton.setOnClickListener(new View.OnClickListener() {
             @Override
