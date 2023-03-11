@@ -8,19 +8,6 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <!--on below line we are creating edit text
-         for adding a new item to list-->
-    <EditText
-        android:id="@+id/EdtBudget"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginBottom="4dp"
-        android:layout_toLeftOf="@id/AddBudget"
-        android:hint="Add Budget Name" />
-
     <!--button for adding item from edit text to list-->
     <Button
         android:id="@+id/AddBudget"
@@ -39,7 +26,6 @@
         android:id="@+id/BudgetLV"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/EdtBudget"
         android:layout_marginStart="10dp"
         android:layout_marginTop="2dp"
         android:layout_marginBottom="2dp"
