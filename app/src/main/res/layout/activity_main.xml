@@ -94,5 +94,15 @@
         app:layout_constraintTop_toBottomOf="@+id/TopBarImage"
         app:layout_constraintVertical_bias="1.0" />
 
+    <ImageView
+        android:id="@+id/TopBarLogo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="176dp"
+        android:src="@drawable/budget_bro_top_bar_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
