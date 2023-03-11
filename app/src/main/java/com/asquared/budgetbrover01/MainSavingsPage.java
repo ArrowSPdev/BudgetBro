@@ -3,6 +3,7 @@ package com.asquared.budgetbrover01;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -12,10 +13,14 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
+import java.util.List;
 
 public class MainSavingsPage extends AppCompatActivity {
 
+    private static final String TAG = "MainSavingsPage";
 
+    private List<Saving> savings = new ArrayList<>();
+    private ArrayAdapter<Saving> adapter;
 
     private ListView savingsLV;
     Button BtnSvgInput;
@@ -25,6 +30,7 @@ public class MainSavingsPage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.d(TAG, "onCreate: Started.");
         setContentView(R.layout.activity_main_savings_page);
 
         // on below line we are setting adapter for our list view.
