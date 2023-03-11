@@ -20,6 +20,11 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".BudgetInput"
+            android:exported="false"
+            android:label="@string/title_activity_budget_input"
+            android:theme="@style/Theme.BudgetBroVer01.NoActionBar" />
+        <activity
             android:name=".MainSavingsPage"
             android:exported="false"
             android:label="@string/app_name">
