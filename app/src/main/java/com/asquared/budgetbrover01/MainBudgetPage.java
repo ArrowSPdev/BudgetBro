@@ -1,20 +1,12 @@
 package com.asquared.budgetbrover01;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ListView;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.asquared.budgetbrover01.BudgetInput;
-
-import java.util.ArrayList;
-
-public class MainBudgetPage extends AppCompatActivity {
+/*public class MainBudgetPage extends AppCompatActivity {
 
     // on below line we are creating variables.
     public ListView BudgetLV;
@@ -58,3 +50,67 @@ public class MainBudgetPage extends AppCompatActivity {
 
         }
     }
+    */
+public class MainBudgetPage extends AppCompatActivity
+{
+    private ListView BudgetLV;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState)
+    {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main_budget_page);
+        initWidgets();
+        //loadFromDBToMemory();
+        setBudgetAdapter();
+        setOnClickListener();
+    }
+
+
+    private void initWidgets()
+    {
+        BudgetLV = findViewById(R.id.BudgetLV);
+    }
+
+    /*private void loadFromDBToMemory()
+    {
+        SQLiteManager sqLiteManager = SQLiteManager.instanceOfDatabase(this);
+        sqLiteManager.populateNoteListArray();
+    }
+*/
+    private void setBudgetAdapter()
+    {
+        BudgetAdapter noteAdapter = new BudgetAdapter(getApplicationContext(), Budget.nonDeletedBudgets());
+        BudgetLV.setAdapter(noteAdapter);
+    }
+
+
+    private void setOnClickListener()
+    {
+        BudgetLV.setOnItemClickListener(new AdapterView.OnItemClickListener()
+        {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l)
+            {
+                Budget selectedBudget = (Budget) BudgetLV.getItemAtPosition(position);
+                Intent editNoteIntent = new Intent(getApplicationContext(), BudgetDetailActivity.class);
+                editNoteIntent.putExtra(BudgetLV.BUDGET_EDIT_EXTRA, selectedBudget.getId());
+                startActivity(editNoteIntent);
+            }
+        });
+    }
+
+
+    public void newNote(View view)
+    {
+        Intent newNoteIntent = new Intent(this, NoteDetailActivity.class);
+        startActivity(newNoteIntent);
+    }
+
+    @Override
+    protected void onResume()
+    {
+        super.onResume();
+        setBudgetAdapter();
+    }
+}

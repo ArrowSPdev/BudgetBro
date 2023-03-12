@@ -3,59 +3,43 @@ package com.asquared.budgetbrover01;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListView;
+
 import androidx.appcompat.app.AppCompatActivity;
-import java.util.ArrayList;
 
 public class BudgetInput extends AppCompatActivity {
 
-    public ListView BudgetLVInputPage;
-    public Button confirmBudgetBtn;
-    public EditText BudgetEdt;
-    public ArrayList<String> BudgetListInput;
+    // Button BtnSvgInput;
+
+    private EditText EdtBudgetName, EdtBudgetAmount;
+
+    //public ListView savingsLV;
+    //public Button addsvgBtn;
+    //public ArrayList<String> svgsList;
 
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_saving_input_page);
+        setContentView(R.layout.activity_budget_input);
+        initWidgets();
+    }
 
-        // on below line we are initializing our variables.
-        BudgetLVInputPage = findViewById(R.id.BudgetLV);
-        confirmBudgetBtn = findViewById(R.id.ConfirmBudget);
-        BudgetEdt = findViewById(R.id.EdtBudget);
-        BudgetListInput = new ArrayList<>();
+    private void initWidgets()
+    {
+        EdtBudgetName = findViewById(R.id.EdtBudgetName);
+        EdtBudgetAmount = findViewById(R.id.EdtBudgetAmount);
+    }
 
+    public void saveBudget(View view)
+    {
+        String budgetName = String.valueOf(EdtBudgetName.getText());
+        String budgetAmount = String.valueOf(EdtBudgetAmount.getText());
 
+        int id =Budget.BudgetArrayList.size();
+        Budget newBudget = new Budget(id, budgetName, budgetAmount);
+        Budget.BudgetArrayList.add(newBudget);
+        finish();
 
-        // on the below line we are initializing the adapter for our list view.
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, BudgetListInput);
-
-
-        // on below line we are adding click listener for our button.
-        confirmBudgetBtn.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                // on below line we are getting text from edit text
-                String item = BudgetEdt.getText().toString();
-
-                // on below line we are checking if item is not empty
-                if (!item.isEmpty()) {
-
-                    // on below line we are adding item to our list.
-                    BudgetListInput.add(item);
-
-                    // on below line we are notifying adapter
-                    // that data in list is updated to
-                    // update our list view.
-                    adapter.notifyDataSetChanged();
-                }
-
-            }
-        });
     }
 }
