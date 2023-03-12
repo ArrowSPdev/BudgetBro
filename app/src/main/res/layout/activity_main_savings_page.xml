@@ -9,13 +9,7 @@
     android:orientation="vertical"
     tools:context=".MainSavingsPage">
 
-    <!--on below line we are creating edit text
-        for adding a new item to list-->
-
-
-    <!--button for adding item from edit text to list-->
-
-    <!--list view to display list of savings-->
+    <!--List View Items-->
     <Button
         android:id="@+id/BtnSvgInput"
         android:layout_width="wrap_content"
@@ -26,7 +20,7 @@
         android:layout_marginBottom="0dp"
         android:text="ADD NEW SAVING GOAL"
         android:textAllCaps="false"
-        android:onClick="gotoSavingInput"/>
+        android:onClick="newSaving" />
 
     <ListView
         android:id="@+id/SavingsLV"
@@ -36,6 +30,9 @@
         android:layout_below="@id/TopBarImage"
         android:layout_marginTop="-30dp" />
 
+
+
+    <!--Style Items-->
     <ImageView
         android:id="@+id/TopBarImage"
         android:layout_width="wrap_content"

@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="100dp"
     android:padding="15dp"
-    android:background="@color/primary1">
+    android:background="@drawable/roundcorners"
+    android:backgroundTint="@color/primary2"
+>
 
     <TextView
         android:id="@+id/cellSavingName"
@@ -13,15 +15,21 @@
         android:fontFamily="@font/cabin_bold"
         android:text="Name"
         android:textColor="@color/white"
-        android:textSize="25dp"/>
+        android:textSize="25dp"
+        android:layout_centerVertical="true"/>
 
     <TextView
-        android:id="@+id/cellAmount"
+        android:id="@+id/cellSavingAmount"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="28dp"
+        android:layout_alignRight="@id/cellSavingName"
+ android:layout_centerInParent="true"
+        android:layout_alignParentRight="true"
+
         android:fontFamily="@font/cabin"
         android:text="Amount"
         android:textColor="@color/white"
         android:textSize="20dp" />
-</LinearLayout>
+
+</RelativeLayout>
 

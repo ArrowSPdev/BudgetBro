@@ -17,38 +17,56 @@ import java.util.List;
 
 public class MainSavingsPage extends AppCompatActivity {
 
-    private static final String TAG = "MainSavingsPage";
-
-    private List<Saving> savings = new ArrayList<>();
-    private ArrayAdapter<Saving> adapter;
-
     private ListView savingsLV;
-    Button BtnSvgInput;
-    private ArrayList<String> svgsList;
+
+    // private List<Saving> savings = new ArrayList<>();
+   // private ArrayAdapter<Saving> adapter;
+   // Button BtnSvgInput;
+    //private ArrayList<String> svgsList;
 
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.d(TAG, "onCreate: Started.");
         setContentView(R.layout.activity_main_savings_page);
 
-        // on below line we are setting adapter for our list view.
-        ListView lv = (ListView) findViewById(R.id.SavingsLV);
-        ListAdapter adapter;
+        initWidgets();
+        setSavingAdapter();
+
+        //on below line we are setting adapter for our list view.
+        //ListView lv = (ListView) findViewById(R.id.SavingsLV);
+        //ListAdapter adapter;
 
 
-        Button BtnSvgInput = (Button) findViewById(R.id.BtnSvgInput);
+       //Button BtnSvgInput = (Button) findViewById(R.id.BtnSvgInput);
 
-        BtnSvgInput.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                gotoSavingInput(); }
-        });
+        //BtnSvgInput.setOnClickListener(new View.OnClickListener() {
+           // @Override
+            //public void onClick(View v) {
+            //    gotoSavingInput(); }
+       // });
     }
 
-    private void gotoSavingInput()  {
-    Intent intent = new Intent(MainSavingsPage.this, SavingInputPage.class);
-    startActivity(intent);
+
+
+
+
+    private void initWidgets()
+    {
+        savingsLV = findViewById(R.id.SavingsLV);
+
+    }
+
+    private void setSavingAdapter()
+    {
+        SavingAdapter savingAdapter = new SavingAdapter(getApplicationContext(), Saving.savingArrayList);
+        savingsLV.setAdapter(savingAdapter);
+
+    }
+
+    public void newSaving(View view)
+    {
+        Intent newSavingIntent = new Intent(this, SavingInputPage.class);
+        startActivity(newSavingIntent);
     }
 }

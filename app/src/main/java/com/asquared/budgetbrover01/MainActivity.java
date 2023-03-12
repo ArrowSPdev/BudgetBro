@@ -9,9 +9,11 @@ import android.view.View;
 
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
 
+    private ListView savingsLV;
     ImageButton savingButton;
     ImageButton BudgetButton;
 
@@ -19,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        initWidgets();
+        setSavingAdapter();
 
         ImageButton savingButton = (ImageButton) findViewById(R.id.savingButton);
         ImageButton budgetButton = (ImageButton) findViewById(R.id.budgetButton);
@@ -35,8 +39,26 @@ public class MainActivity extends AppCompatActivity {
                 gotoBudgetPage();
             }
         });
-
     }
+
+
+    private void initWidgets()
+    {
+        savingsLV = findViewById(R.id.SavingsLV);
+    }
+
+    private void setSavingAdapter()
+    {
+        SavingAdapter savingAdapter = new SavingAdapter(getApplicationContext(), Saving.savingArrayList);
+        savingsLV.setAdapter(savingAdapter);
+    }
+    public void newSaving(View view)
+    {
+        Intent newSavingIntent = new Intent(this, SavingInputPage.class);
+        startActivity(newSavingIntent);
+    }
+
+
 
     private void gotoBudgetPage() {
         Intent intent = new Intent(MainActivity.this, MainBudgetPage.class);

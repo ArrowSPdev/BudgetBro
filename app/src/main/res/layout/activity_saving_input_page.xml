@@ -25,8 +25,12 @@
         android:text="SAVINGS"
         android:textColor="#FFFFFF"
         android:textSize="50sp" />
-    <!--on below line we are creating edit text
-        for adding a new item to list-->
+
+
+
+
+
+
     <EditText
         android:id="@+id/EdtSavingName"
         android:layout_width="match_parent"
@@ -60,6 +64,9 @@
         android:layout_centerHorizontal="true"
         android:hint="Add Due Date" />
 
+
+
+
     <Button
         android:id="@+id/BtnAdd"
         android:layout_width="wrap_content"
@@ -70,6 +77,7 @@
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="50dp"
         android:text="ADD "
+        android:onClick="saveSaving"
         android:textAllCaps="false" />
 
 </RelativeLayout>

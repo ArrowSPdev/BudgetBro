@@ -1,14 +1,30 @@
 package com.asquared.budgetbrover01;
 
-public class Saving {
-    private String SavingName;
-    private double SavingAmount;
-    private String DateDue;
+import java.util.ArrayList;
 
-    public Saving(String savingName, double savingAmount, String dateDue) {
-        this.SavingName = savingName;
-        this.SavingAmount = savingAmount;
-        this.DateDue = dateDue;
+public class Saving
+{
+    public static ArrayList<Saving> savingArrayList = new ArrayList<>();
+
+    private int id;
+    private String SavingName;
+    private String SavingAmount;
+    //private String DateDue;
+
+    public Saving(int id, String savingName, String savingAmount) {
+        this.id = id;
+        SavingName = savingName;
+        SavingAmount = savingAmount;
+        //DateDue = dateDue;
+    }
+
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getSavingName() {
@@ -16,22 +32,24 @@ public class Saving {
     }
 
     public void setSavingName(String savingName) {
-        this.SavingName = savingName;
+        SavingName = savingName;
     }
 
-    public double getSavingAmount() {
+    public String getSavingAmount() {
         return SavingAmount;
     }
 
-    public void setSavingAmount(double savingAmount) {
+    public void setSavingAmount(String savingAmount) {
         SavingAmount = savingAmount;
     }
 
-    public String getDateDue() {
-        return DateDue;
+    //public String getDateDue() {
+    //    return DateDue;
+   // }
+
+    //public void setDateDue(String dateDue)
+    //{
+     //   DateDue = dateDue;
     }
 
-    public void setDateDue(String dateDue) {
-        DateDue = dateDue;
-    }
-}
+
