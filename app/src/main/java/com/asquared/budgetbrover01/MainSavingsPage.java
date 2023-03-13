@@ -3,9 +3,17 @@ package com.asquared.budgetbrover01;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ListAdapter;
 import android.widget.ListView;
 import androidx.appcompat.app.AppCompatActivity;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainSavingsPage extends AppCompatActivity {
 
@@ -51,7 +59,7 @@ public class MainSavingsPage extends AppCompatActivity {
 
     private void setSavingAdapter()
     {
-        SavingAdapter savingAdapter = new SavingAdapter(getApplicationContext(), Saving.ArrayList);
+        SavingAdapter savingAdapter = new SavingAdapter(getApplicationContext(), Saving.savingArrayList);
         savingsLV.setAdapter(savingAdapter);
 
     }

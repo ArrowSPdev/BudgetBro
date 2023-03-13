@@ -1,4 +1,4 @@
- /*package com.asquared.budgetbrover01;
+/*package com.asquared.budgetbrover01;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -9,20 +9,29 @@ public class Budget
     public static String BUDGET_EDIT_EXTRA =  "budgetEdit";
 
     private int id;
-    private String budgetName;
-    private String budgetDescription;
+    private String title;
+    private String description;
+    private Date deleted;
 
-
-    public Budget(int id, String budgetName, String budgetDescription)
+    public Budget(int id, String title, String description, Date deleted)
     {
         this.id = id;
-        this.budgetName = budgetName;
-        this.budgetDescription = budgetDescription;
+        this.title = title;
+        this.description = description;
+        this.deleted = deleted;
     }
 
-    public static com.asquared.budgetbrover01.Budget getBudgetForID(int passedNoteID)
+    public Budget(int id, String title, String description)
     {
-        for (com.asquared.budgetbrover01.Budget budget : budgetArrayList)
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        deleted = null;
+    }
+
+    public static codewithcal.au.sqliteandroidstudiotutorial.Budget getBudgetForID(int passedNoteID)
+    {
+        for (codewithcal.au.sqliteandroidstudiotutorial.Budget budget : budgetArrayList)
         {
             if(budget.getId() == passedNoteID)
                 return budget;
@@ -31,6 +40,17 @@ public class Budget
         return null;
     }
 
+    public static ArrayList<codewithcal.au.sqliteandroidstudiotutorial.Budget> nonDeletedNotes()
+    {
+        ArrayList<codewithcal.au.sqliteandroidstudiotutorial.Budget> nonDeleted = new ArrayList<>();
+        for(codewithcal.au.sqliteandroidstudiotutorial.Budget budget : budgetArrayList)
+        {
+            if(budget.getDeleted() == null)
+                nonDeleted.add(budget);
+        }
+
+        return nonDeleted;
+    }
 
     public int getId()
     {
@@ -42,23 +62,33 @@ public class Budget
         this.id = id;
     }
 
-    public String getBudgetName()
+    public String getTitle()
     {
-        return budgetName;
+        return title;
     }
 
-    public void setBudgetName(String budgetName)
+    public void setTitle(String title)
     {
-        this.budgetName = budgetName;
+        this.title = title;
     }
 
-    public String getBudgetDescription()
+    public String getDescription()
     {
-        return budgetDescription;
+        return description;
     }
 
-    public void setBudgetDescription(String budgetDescription)
+    public void setDescription(String description)
     {
-        this.budgetDescription = budgetDescription;
+        this.description = description;
+    }
+
+    public Date getDeleted()
+    {
+        return deleted;
+    }
+
+    public void setDeleted(Date deleted)
+    {
+        this.deleted = deleted;
     }
 }*/

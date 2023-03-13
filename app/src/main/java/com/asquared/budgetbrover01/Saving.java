@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Saving
 {
-    public static ArrayList<Saving> ArrayList = new ArrayList<Saving>();
+    public static ArrayList<Saving> savingArrayList = new ArrayList<>();
 
     private int id;
     private String SavingName;
