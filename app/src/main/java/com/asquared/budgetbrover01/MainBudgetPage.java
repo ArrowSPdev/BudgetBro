@@ -103,8 +103,8 @@ public class MainBudgetPage extends AppCompatActivity
 
     public void newNote(View view)
     {
-        Intent newNoteIntent = new Intent(this, NoteDetailActivity.class);
-        startActivity(newNoteIntent);
+        Intent newBudgetIntent = new Intent(this, BudgetDetailActivity.class);
+        startActivity(newBudgetIntent);
     }
 
     @Override

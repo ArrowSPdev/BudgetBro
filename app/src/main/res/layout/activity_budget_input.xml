@@ -4,19 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".placeholder.BudgetInput">
+    tools:context=".BudgetInput">
 
     <EditText
-        android:id="@+id/EdtBudget"
-        android:layout_width="414dp"
-        android:layout_height="67dp"
-        android:hint="Add Budget Name" />
+        android:id="@+id/budgetTitle"
+        android:layout_width="365dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="64dp"
+        android:hint="Add Budget Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/ConfirmBudget"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
         android:text="Confirm"
-        tools:layout_editor_absoluteX="154dp"
-        tools:layout_editor_absoluteY="147dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/budgetTitle" />
 </androidx.constraintlayout.widget.ConstraintLayout>
