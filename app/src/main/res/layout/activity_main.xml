@@ -15,8 +15,17 @@
         android:layout_height="193dp"
         android:layout_below="@id/TopBarImage"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rectangle"/>
+
+    <ListView
+        android:id="@+id/BudgetsLV"
+        android:layout_width="306dp"
+        android:layout_height="193dp"
+        android:layout_below="@id/SavingsLV"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        />
+        android:background="@drawable/rectangle"/>
 
     <ImageView
         android:id="@+id/TopBarImage"

@@ -1,4 +1,4 @@
-package com.asquared.budgetbrover01;
+/*package com.asquared.budgetbrover01;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.ListView;
 import androidx.appcompat.app.AppCompatActivity;
 
-/*public class MainBudgetPage extends AppCompatActivity {
+public class MainBudgetPage extends AppCompatActivity {
 
     // on below line we are creating variables.
     public ListView BudgetLV;
@@ -50,7 +50,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
         }
     }
-    */
+
 public class MainBudgetPage extends AppCompatActivity
 {
     private ListView BudgetLV;
@@ -77,7 +77,7 @@ public class MainBudgetPage extends AppCompatActivity
         SQLiteManager sqLiteManager = SQLiteManager.instanceOfDatabase(this);
         sqLiteManager.populateNoteListArray();
     }
-*/
+
     private void setBudgetAdapter()
     {
         BudgetAdapter noteAdapter = new BudgetAdapter(getApplicationContext(), Budget.nonDeletedBudgets());
@@ -113,4 +113,4 @@ public class MainBudgetPage extends AppCompatActivity
         super.onResume();
         setBudgetAdapter();
     }
-}
+} */

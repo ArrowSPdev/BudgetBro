@@ -1,4 +1,4 @@
-package com.asquared.budgetbrover01;
+/*package com.asquared.budgetbrover01;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -35,4 +35,4 @@ public class BudgetAdapter extends ArrayAdapter<Budget>
 
         return convertView;
     }
-}
+}*/

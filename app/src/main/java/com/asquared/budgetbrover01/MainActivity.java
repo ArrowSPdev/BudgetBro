@@ -33,12 +33,12 @@ public class MainActivity extends AppCompatActivity {
                 gotoSavingsPage();
             }
         });
-        budgetButton.setOnClickListener(new View.OnClickListener() {
+       /* budgetButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 gotoBudgetPage();
             }
-        });
+        }); */
     }
 
 
@@ -60,10 +60,10 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    private void gotoBudgetPage() {
+  /*  private void gotoBudgetPage() {
         Intent intent = new Intent(MainActivity.this, MainBudgetPage.class);
         startActivity(intent);
-    }
+    }*/
 
     private void gotoSavingsPage() {
         Intent intent = new Intent(MainActivity.this, MainSavingsPage.class);
